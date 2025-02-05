@@ -128,7 +128,7 @@ public class RNGCDiscoveryManager
       @Override
       public void run() {
         MediaRouteSelector selector = CastContext.getSharedInstance().getMergedSelector();
-        MediaRouter.getInstance(context).addCallback(selector, mediaRouterCallback);
+        MediaRouter.getInstance(context).addCallback(selector, mediaRouterCallback, MediaRouter.CALLBACK_FLAG_REQUEST_DISCOVERY);
       }
     });
     mListenersAttached = true;
