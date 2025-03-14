@@ -1,6 +1,6 @@
 {
-  "name": "react-native-google-cast",
-  "version": "4.8.3",
+  "name": "livtcgmacedo-react-native-google-cast",
+  "version": "1.0.3",
   "description": "React Native wrapper for the Google Cast SDK for iOS and Android",
   "main": "lib/commonjs/index",
   "react-native": "src/index",
@@ -21,7 +21,7 @@
     "!**/__mocks__",
     "lib/**/*",
     "app.plugin.js",
-    "react-native-google-cast.podspec"
+    "livtcgmacedo-react-native-google-cast.podspec"
   ],
   "contributors": [
     "Charlie L <charliesbot@gmail.com>",

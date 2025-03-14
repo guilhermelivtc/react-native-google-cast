@@ -151,6 +151,16 @@ public class RNGCDiscoveryManager
 
   @Override
   public void onHostPause() {
+    final ReactApplicationContext context = getReactApplicationContext();
+    if (!RNGCCastContext.isCastApiAvailable(context)) return;
+
+    context.runOnUiQueueThread(new Runnable() {
+      @Override
+      public void run() {
+        MediaRouter.getInstance(context).removeCallback(mediaRouterCallback);
+      }
+    });
+    mListenersAttached = false;
   }
 
   private WritableArray getDevices() {
